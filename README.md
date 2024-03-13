@@ -30,7 +30,7 @@
 ## 🔥 News
  - [2024-01-29] Our paper is accepted by [ICRA 2024](https://2024.ieee-icra.org/) 🎉.
  - [2024-01-29] Our paper can be seen here 👉 [arXiv](https://arxiv.org/abs/2309.09737).
- - [2024-03-13] We further improve the overall performance. Please check [Evaluation](#🔎evaluation).
+ - [2024-03-13] We further improve the overall performance. Please check [Evaluation](#-evaluation).
  - [2024-03-13] Our paper demo video can be seen here 👉[video](https://youtu.be/IxfyCWyNhfw).
 ## 🔗 Citation
 If you find our work useful in your research, please consider citing:
@@ -139,7 +139,7 @@ To evaluate the model and generate the model predictions, please run:
 python main.py --config configs_eval.yaml
 ```
 
-## 🔎Evaluation
+## 🔎 Evaluation
 
 To evaluate with the trained RaTrack model, please open the `configs_eval.yaml` and change the `model_path` to the path of the trained model. 
 ```yaml
