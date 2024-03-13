@@ -60,7 +60,7 @@ Here are some GIFs to show our qualitative results on tracking. For more qualita
 
 ## ✅ Dataset Preparation
 
-First, please request and download the View of Delft (VoD) dataset from the [official website](https://tudelft-iv.github.io/view-of-delft-dataset/). Unzip into the folder you prefer.
+First, please request and download the View of Delft (VoD) dataset from the [VoD official website](https://tudelft-iv.github.io/view-of-delft-dataset/). Unzip into the folder you prefer.
 
 Please also obtain the tracking annotation from [VoD Github](https://github.com/tudelft-iv/view-of-delft-dataset/blob/main/docs/ANNOTATION.md). Unzip all the `.txt` tracking annotation files into the path: `PATH_TO_VOD_DATASET/view_of_delft_PUBLIC/lidar/training/label_2_tracking/`
 
