@@ -1,0 +1,15 @@
+checkpoints
+temp_vis
+4dmot_runthis
+*.so
+*.o
+results
+results_vis
+vod_tracking_gt
+/summary_a_average_eval2D.txt
+/test.ipynb
+
+checkpoints/
+results_track4d_radar/
+vod_vis_lidar/
+vod_vis_radar/

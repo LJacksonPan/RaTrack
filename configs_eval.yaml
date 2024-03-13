@@ -1,0 +1,39 @@
+exp_name: track4d_radar
+model: track4d_radar
+
+## training 
+num_points: 256
+batch_size: 1
+val_batch_size: 1
+epochs: 8
+lr: 0.001 # final,
+decay_epochs: 1
+decay_rate: 0.97
+pretrain_epochs: 16
+
+## device
+cuda_device: '0'
+no_cuda: False
+seed: 1234
+num_workers: 1 # for eval?
+
+## dataset
+eval: True
+dataset: vod
+dataset_path: /home/hantaozhong/view_of_delft_PUBLIC
+aug: True
+npoints: 512
+start_seq: 0
+end_seq: 16
+
+
+## method parameter
+rigid_thres: 0.15
+pointrcnn: False
+min_obj_points: 2 #?
+
+
+## checkpoint
+load_checkpoint: False
+model_path: ''
+continue_model: False
