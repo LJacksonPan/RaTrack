@@ -64,7 +64,7 @@ First, please request and download the View of Delft (VoD) dataset from the [VoD
 
 Please also obtain the tracking annotation from [VoD Github](https://github.com/tudelft-iv/view-of-delft-dataset/blob/main/docs/ANNOTATION.md). Unzip all the `.txt` tracking annotation files into the path: `PATH_TO_VOD_DATASET/view_of_delft_PUBLIC/lidar/training/label_2_tracking/`
 
-The folder structure should look like this:
+The dataset folder structure should look like this:
 
 ```
 view_of_delft_PUBLIC/
