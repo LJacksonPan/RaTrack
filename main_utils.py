@@ -88,10 +88,8 @@ def epoch(args, net, train_loader, ep_num=None, opt=None, mode='train'):
             pc1_compensated = pc1_compensated.permute(0, 2, 1)[:, :3, :].cuda()
             index = int(index)
 
-            # TODO FIX HERE
-
-            kitti_locations = VodTrackLocations(root_dir="/home/hantaozhong/view_of_delft_PUBLIC/",
-                                                output_dir="/home/hantaozhong/view_of_delft_PUBLIC/",
+            kitti_locations = VodTrackLocations(root_dir=args.dataset_path,
+                                                output_dir=args.dataset_path,
                                                 frame_set_path="",
                                                 pred_dir="",
                                                 )

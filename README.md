@@ -48,7 +48,7 @@ If you find our work useful in your research, please consider citing:
 ```
 
 ## 📊 Qualitative results
-Here are some GIFs to show our qualitative results on tracking. For more qualitative results, please refer to our [demo video](#demo-video)
+Here are some GIFs to show our qualitative results on tracking. For more qualitative results, please refer to our [demo video](#demo-video).
 
 <p align="center">
 <img src='./doc/ratrack_gif1_slow.gif' width="840">
@@ -58,8 +58,49 @@ Here are some GIFs to show our qualitative results on tracking. For more qualita
 <img src='./doc/ratrack_gif2_slow.gif' width="840">
 </p>
 
+## ✅ Dataset Preparation
 
-## ✅ Getting Started
+First, please request and download the View of Delft (VoD) dataset from the [official website](https://tudelft-iv.github.io/view-of-delft-dataset/). Unzip into the folder you prefer.
+
+Please also obtain the tracking annotation from [VoD Github](https://github.com/tudelft-iv/view-of-delft-dataset/blob/main/docs/ANNOTATION.md). Unzip all the `.txt` tracking annotation files into the path: `PATH_TO_VOD_DATASET/view_of_delft_PUBLIC/lidar/training/label_2_tracking/`
+
+The folder structure should look like this:
+
+```
+view_of_delft_PUBLIC/
+├── lidar
+│   ├── ImageSets
+│   ├── testing
+│   └── training
+│       ├── calib
+│       ├── image_2
+│       ├── label_2
+│           ├── 00000.txt
+│           ├── 00001.txt
+│           ├── ...
+│       ├── label_2_tracking
+│           ├── 00000.txt
+│           ├── 00001.txt
+│           ├── ...
+│       ├── pose
+│       └── velodyne
+├── radar
+│   ├── testing
+│   └── training
+│       ├── calib
+│       └── velodyne
+├── radar_3frames
+│   ├── testing
+│   └── training
+│       └── velodyne
+└── radar_5frames
+    ├── testing
+    └── training
+        └── velodyne
+```
+
+
+## 🚀 Getting Started
 
 Please ensure you running with an Ubuntu machine with Nvidia GPU (at least 2GB VRAM). 
 The code is tested with Ubuntu22.04, and CUDA 11.8 with RTX 4090. Any other machine is not guaranteed to work.

@@ -363,13 +363,6 @@ class trackingEvaluation(object):
                         t_data.corners_3d_cam = None
 
                         if point_data:
-
-                            # kitti_locations = KittiLocations(root_dir="/mnt/data/zhijun/view_of_delft_PUBLIC/",
-                            #                                 output_dir="/mnt/sda1/zhijun/example_output",
-                            #                                 frame_set_path="",
-                            #                                 pred_dir="",
-                            #                                 )
-
                             kitti_locations = VodTrackLocations(root_dir="/home/hantaozhong/view_of_delft_PUBLIC/",
                                                                 output_dir="/home/hantaozhong/view_of_delft_PUBLIC/",
                                                                 frame_set_path="",
@@ -1361,13 +1354,13 @@ class trackingEvaluation(object):
 
         if threshold is None: summary = self.createSummary_details()
         else: summary = self.createSummary_simple(threshold, recall)
-        print('simple summary:')
+        # print('simple summary:')
         mail.msg(summary)       # mail or print the summary.
         print(summary, file=dump)
-        summary = self.createSummary_details()
-        print('details summary:')
-        mail.msg(summary)  # mail or print the summary.
-        print(summary, file=dump)
+        # summary = self.createSummary_details()
+        # print('details summary:')
+        # mail.msg(summary)  # mail or print the summary.
+        # print(summary, file=dump)
 
 class stat:
     """

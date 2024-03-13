@@ -25,6 +25,7 @@ class TrackingDataVOD(Dataset):
 
     def __init__(self, args, data_dir):
         self.eval = args.eval
+        self.dataset_path = args.dataset_path
         # set params
         self.dir = data_dir
         self.index_incre = 0
@@ -63,8 +64,8 @@ class TrackingDataVOD(Dataset):
 
         while True:
             try:
-                kitti_locations = VodTrackLocations(root_dir="/home/hantaozhong/view_of_delft_PUBLIC/",
-                                                output_dir="/home/hantaozhong/view_of_delft_PUBLIC/",
+                kitti_locations = VodTrackLocations(root_dir=self.dataset_path,
+                                                output_dir=self.dataset_path,
                                                 frame_set_path="",
                                                 pred_dir="",
                                                 )
