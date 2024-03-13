@@ -1,7 +1,7 @@
 <p align="center">
 <h1 align="center"><strong>
 </p> <p align="center">
-<img src='./doc/logo.jpg' width="25"> RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud</strong></h1>
+<img src='./doc/logo.jpg' width="30"> RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud</strong></h1>
   <p align="center">
     <a href='https://scholar.google.com/citations?user=MbzyV9YAAAAJ&hl=en' target='_blank'>Zhijun Pan*</a>&emsp; 
     <a href='https://toytiny.github.io/' target='_blank'>Fangqiang Ding*</a>&emsp;
