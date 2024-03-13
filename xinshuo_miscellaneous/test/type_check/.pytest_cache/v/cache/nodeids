@@ -1,0 +1,7 @@
+[
+  "test_check_list.py::test_islistoflist", 
+  "test_check_list.py::test_islistofdict", 
+  "test_check_list.py::test_islistofscalar", 
+  "test_check_list.py::test_islistofpositiveinteger", 
+  "test_check_list.py::test_islistofnonnegativeinteger"
+]

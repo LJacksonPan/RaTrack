@@ -1,0 +1,22 @@
+title: The View of Delft dataset
+description: Documentation and development kit
+show_downloads: true
+google_analytics: UA-229942308-1
+remote_theme: tuur29/pages-themes-cayman
+color:
+  header: "#FFF"
+  gradient_left: "#0076C2"
+  gradient_right: "#00B8C8"
+  link: "#0076C2" # this default to gradient_color
+  section_title: "#00A6D6" # this default to gradient_color
+hide_first_title: false
+syntax_theme: https://stylishthemes.github.io/Syntax-Themes/pygments/css-github/pygments-monokai.css
+buttons:
+  zip_url: https://github.com/tudelft-iv/view-of-delft-dataset/archive/refs/heads/main.zip
+  zip_title: Download the devkit
+  zip_hide: false
+  tar_hide: false
+  tar_title: Home page
+  tar_url: https://tudelft-iv.github.io/view-of-delft-dataset/
+  github_hide: false
+
