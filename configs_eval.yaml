@@ -6,7 +6,7 @@ num_points: 256
 batch_size: 1
 val_batch_size: 1
 epochs: 8
-lr: 0.001 # final,
+lr: 0.001
 decay_epochs: 1
 decay_rate: 0.97
 pretrain_epochs: 16
@@ -15,12 +15,12 @@ pretrain_epochs: 16
 cuda_device: '0'
 no_cuda: False
 seed: 1234
-num_workers: 1 # for eval?
+num_workers: 1
 
 ## dataset
 eval: True
 dataset: vod
-dataset_path: /home/hantaozhong/view_of_delft_PUBLIC
+dataset_path: ENTRE YOUR DATASET PATH HERE
 aug: True
 npoints: 512
 start_seq: 0
@@ -30,7 +30,7 @@ end_seq: 16
 ## method parameter
 rigid_thres: 0.15
 pointrcnn: False
-min_obj_points: 2 #?
+min_obj_points: 2
 
 
 ## checkpoint
