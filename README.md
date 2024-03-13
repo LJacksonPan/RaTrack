@@ -153,7 +153,14 @@ Then run the following command:
 python main.py --config configs_eval.yaml
 ```
 
-This will generate the predictions in the `results` folder.
+This will generate the predictions in the `results` folder. 
+
+The evaluation results of the provided trained RaTrack model are following:
+
+| Method    | SAMOTA | AMOTA | AMOTP | MOTA | MODA | MT   | ML   |
+|-----------|--------|-------|-------|------|------|------|------|
+| RaTrack   | 74.16  | 31.50 | 60.17 | 67.27| 77.83| 42.65| 14.71|
+| RaTrack (Improved)| 80.33| 34.58 | 59.37 | 62.80| 77.07| 54.41| 13.24|
 
 If you are interested in evaluating the predictions with our version of AB3DMOT evaluation, please contact us.
 
