@@ -1,4 +1,3 @@
-<br>
 <p align="center">
 <h1 align="center"><strong>🛤️ RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud</strong></h1>
   <p align="center">
@@ -26,7 +25,7 @@
 ## 📦 Method
 | ![pipeline.jpg](./doc/ratrack_pipeline.png) | 
 |:--:| 
-| ***Figure 1. Overall network pipeline of RaTrack**. Given each 4D radar point cloud from the stream, our objective is to detect multiple moving objects in a class-agnostic manner without the need to regress their 3D bounding boxes. These detected objects are then associated with objects tracked in the previous frame. The result of this process is a set of updated objects in track for the current frame. Specifically, we first apply a backbone to encode intra- and inter-frame radar point cloud features. With the extracted features, our point-wise motion estimation module infers point-level scene flow as an explicit complement to augment the latent features of radar point clouds. Our advocated idea of class-agnostic detection without bounding boxes is introduced in the object detection module in which moving points are first identified and then used to detect moving objects via clustering. Finally, our data association module computes the affinity matrix with a learnable distance metric and then optimises the bipartite matching problem. The entire network is end-to-end trainable with a multi-task loss that incorporates three supervised subtasks: motion segmentation, scene flow estimation, and affinity matrix computation.* |
+| ***Figure 1. Overall network pipeline of RaTrack**. Given each 4D radar point cloud from the stream, we first apply a backbone to encode intra- and inter-frame radar point cloud features. With the extracted features, our point-wise motion estimation module infers point-level scene flow as an explicit complement to augment the latent features of radar point clouds. Our advocated idea of class-agnostic detection without bounding boxes is introduced in the object detection module in which moving points are first identified and then used to detect moving objects via clustering. Finally, our data association module computes the affinity matrix with a learnable distance metric and then optimises the bipartite matching problem. The entire network is end-to-end trainable with a multi-task loss that incorporates three supervised subtasks: motion segmentation, scene flow estimation, and affinity matrix computation.* |
 
 ## 🔥 News
  - [2024-01-29] Our paper is accepted by [ICRA 2024](https://2024.ieee-icra.org/) 🎉.
@@ -38,23 +37,23 @@ If you find our work useful in your research, please consider citing:
 
 
 ```bibtex
-@article{pan2023moving,
-  title={Moving Object Detection and Tracking with 4D Radar Point Cloud},
-  author={Pan, Zhijun and Ding, Fangqiang and Zhong, Hantao and Lu, Chris Xiaoxuan},
-  journal={arXiv preprint arXiv:2309.09737},
-  year={2023}
+@InProceedings{pan2023moving,
+    author    = {Pan, Zhijun and Ding, Fangqiang and Zhong, Hantao and Lu, Chris Xiaoxuan},
+    title     = {Moving Object Detection and Tracking with 4D Radar Point Cloud},
+    booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+    year      = {2024},
 }
 ```
 
 ## 📊 Qualitative results
-Here are some GIFs to show our qualitative results on tracking. For more qualitative results, please refer to our [demo video](#demo-video).
+Here are some GIFs to show our qualitative results on moving object detection and tracking based on 4D radar point clouds. Note that only moving objects with no less than five points. For more qualitative results, please refer to our [demo video](#demo-video).
 
 <p align="center">
-<img src='./doc/ratrack_gif1_slow.gif' width="840">
+<img src='./doc/ratrack_gif1_slow.gif' width="800">
 </p>
 
 <p align="center">
-<img src='./doc/ratrack_gif2_slow.gif' width="840">
+<img src='./doc/ratrack_gif2_slow.gif' width="800">
 </p>
 
 ## ✅ Dataset Preparation
@@ -102,7 +101,7 @@ view_of_delft_PUBLIC/
 ## 🚀 Getting Started
 
 Please ensure you running with an Ubuntu machine with Nvidia GPU (at least 2GB VRAM). 
-The code is tested with Ubuntu22.04, and CUDA 11.8 with RTX 4090. Any other machine is not guaranteed to work.
+The code is tested with Ubuntu 22.04, and CUDA 11.8 with RTX 4090. Any other machine is not guaranteed to work.
 
 To start, please ensure you have miniconda installed by following the official instructions [here](https://docs.anaconda.com/free/miniconda/miniconda-install/). 
 
