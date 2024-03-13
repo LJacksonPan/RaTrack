@@ -2,16 +2,16 @@
 <p align="center">
 <h1 align="center"><strong>🛤️ RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud</strong></h1>
   <p align="center">
-    <a href='https://scholar.google.com/citations?user=MbzyV9YAAAAJ&hl=en' target='_blank'>Zhijun Pan¹*</a>&emsp;
-    <a href='https://toytiny.github.io/' target='_blank'>Fangqiang Ding²*</a>&emsp;
-    <a href='https://www.linkedin.com/in/hantao-zhong/' target='_blank'>Hantao Zhong³*</a>&emsp;
-    <a href='https://christopherlu.github.io/' target='_blank'>Chris Xiaoxuan Lu⁴
+    <a href='https://scholar.google.com/citations?user=MbzyV9YAAAAJ&hl=en' target='_blank'>Zhijun Pan*</a>&emsp; 
+    <a href='https://toytiny.github.io/' target='_blank'>Fangqiang Ding*</a>&emsp;
+    <a href='https://www.linkedin.com/in/hantao-zhong/' target='_blank'>Hantao Zhong*</a>&emsp;
+    <a href='https://christopherlu.github.io/' target='_blank'>Chris Xiaoxuan Lu
     </a>&emsp;
     <br>
     *Equal Contribution
     <br>
-    Royal College of Art¹&emsp;University of Edinburgh²&emsp;University of Cambridge³&emsp;
-    University College London⁴
+    Royal College of Art&emsp;University of Edinburgh&emsp;University of Cambridge&emsp;
+    University College London
   </p>
 </p>
 
@@ -23,17 +23,16 @@
 
 </div>
 
-<p align="center">
-<img src='./doc/ratrack_pipeline.png' width="840">
-</p>
-
-
+## 📦 Method
+| ![pipeline.jpg](./doc/ratrack_pipeline.png) | 
+|:--:| 
+| ***Figure 1. Overall network pipeline of RaTrack**. Given each 4D radar point cloud from the stream, our objective is to detect multiple moving objects in a class-agnostic manner without the need to regress their 3D bounding boxes. These detected objects are then associated with objects tracked in the previous frame. The result of this process is a set of updated objects in track for the current frame. Specifically, we first apply a backbone to encode intra- and inter-frame radar point cloud features. With the extracted features, our point-wise motion estimation module infers point-level scene flow as an explicit complement to augment the latent features of radar point clouds. Our advocated idea of class-agnostic detection without bounding boxes is introduced in the object detection module in which moving points are first identified and then used to detect moving objects via clustering. Finally, our data association module computes the affinity matrix with a learnable distance metric and then optimises the bipartite matching problem. The entire network is end-to-end trainable with a multi-task loss that incorporates three supervised subtasks: motion segmentation, scene flow estimation, and affinity matrix computation.* |
 
 ## 🔥 News
  - [2024-01-29] Our paper is accepted by [ICRA 2024](https://2024.ieee-icra.org/) 🎉.
- - [2024-01-29] Our paper can be seen here 👉 [arXiv](https://arxiv.org/abs/2309.09737)
+ - [2024-01-29] Our paper can be seen here 👉 [arXiv](https://arxiv.org/abs/2309.09737).
  - [2024-03-13] We further improve the overall performance. Please check [Evaluation](#evaluation).
- - [2024-03-13] Our paper demo video can be seen here 👉[video](https://youtu.be/IxfyCWyNhfw)
+ - [2024-03-13] Our paper demo video can be seen here 👉[video](https://youtu.be/IxfyCWyNhfw).
 ## 🔗 Citation
 If you find our work useful in your research, please consider citing:
 
