@@ -49,11 +49,6 @@ def eval(args, net, train_loader, test_loader, textio):
 
         num_examples, total_loss, loss_items, trk_met, seg_met, flow_met = epoch(args, net, train_loader, mode='eval',
                                                                                  ep_num=99999)
-
-        ign = trk_met['na']
-        for key in trk_met.keys():
-            trk_met[key] = trk_met[key] / (num_examples - ign)
-        print(trk_met)
         for key in seg_met.keys():
             seg_met[key] = seg_met[key] / num_examples
         print(seg_met)

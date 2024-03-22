@@ -3,7 +3,7 @@ import random
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
-from models.utils.track4d_utils import eval_tracking, filter_moving_boxes_det, get_bbx_param, \
+from models.utils.track4d_utils import filter_moving_boxes_det, get_bbx_param, \
     get_gt_flow_new, obj_centre, filter_object_points, map_gt_objects
 
 from losses import *
@@ -31,14 +31,6 @@ def train_one_epoch(args, net, train_loader, opt, mode, ep):
         for i in range(len(loss_items[l])):
             loss_items[l][i] = loss_items[l][i]
         loss_items[l] = np.mean(np.array(loss_items[l]))
-
-    for key in trk_met.keys():
-        ign = trk_met['na']
-        if num_examples - ign > 0:
-            trk_met[key] = trk_met[key] / (num_examples - ign)
-        else:
-            trk_met[key] = 0
-    print('tracking: ', trk_met)
     for key in seg_met.keys():
         seg_met[key] = seg_met[key] / num_examples
     print('segmentation: ', seg_met)
@@ -140,11 +132,6 @@ def epoch(args, net, train_loader, ep_num=None, opt=None, mode='train'):
             cls_mask = torch.where(cls.squeeze(0).squeeze(0) > 0.50, 1, 0)
 
             mappings_curr, mappings_inv = map_gt_objects(objs_centre1, gt_objs1, objects)
-            trk_met_f = eval_tracking(args, objects, gt_objs1, mappings_prev, mappings_curr, aff_mat)
-            for key in trk_met_f.keys():
-                if key not in trk_met:
-                    trk_met[key] = 0
-                trk_met[key] += trk_met_f[key]
 
             seg_met_f = eval_motion_seg(cls_mask.float(), gt_cls1.float())
             for key in seg_met_f.keys():
