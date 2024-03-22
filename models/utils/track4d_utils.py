@@ -456,55 +456,6 @@ def mismatches(mappings_prev, mappings_curr, aff_mat, objs, gt_objs):
                 mismat += 1
     return mismat, fp
 
-
-def eval_tracking(args, objs, gt_objs, mappings_prev, mappings_curr, aff_mat):
-    # matched but affinity < thres, false positive
-    # gt can't find object, miss
-    gt_objs_ = dict()
-    for key, gt_obj in gt_objs.items():
-        if gt_obj.size(2) < args.min_obj_points:
-            continue
-        gt_objs_[key] = gt_obj
-    gt_objs = gt_objs_
-
-    misses = 0
-    if len(gt_objs) > len(objs):
-        misses = len(gt_objs) - len(objs)
-    mismat, fp = mismatches(mappings_prev, mappings_curr, aff_mat, objs, gt_objs)
-    if len(gt_objs) == 0:
-        return {'na': 1}
-
-    total_p = 0
-    common_p = 0
-    for key, gt_obj in gt_objs.items():
-        if key in mappings_curr and key in mappings_prev:
-            
-            if mappings_curr[key] != mappings_prev[key]:
-                continue
-            # skip low confidence objects
-            aff_idx_prev = list(mappings_prev.keys()).index(key)
-            aff_idx_curr = list(mappings_curr.keys()).index(key)
-            if aff_mat[0, aff_idx_prev, aff_idx_curr] < 0.3:
-                continue
-            obj = objs[mappings_curr[key]][:, 3:6, :]
-
-            total_p += obj.size(2)
-            total_p += gt_obj.size(2)
-            for i in range(gt_obj.size(2)):
-                point = gt_obj[:, :, i].unsqueeze(2)
-                idx = find_nearest_obj_coord(point, obj)
-                if euc_distance(point, obj[:, :, idx]) < 0.00001:
-                    common_p += 1
-        else:
-            continue
-    if (total_p - common_p) == 0:
-        return {'na': 1}
-
-    if common_p / (total_p - common_p) > 1:
-        print()
-    return {'MOTA': 1 - (misses + fp + mismat) / len(gt_objs), 'MOTP': common_p / (total_p - common_p), 'IDS': mismat}
-
-
 def get_frame_det(dets_all, frame):
     additional_info = None    
 

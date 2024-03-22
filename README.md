@@ -34,6 +34,7 @@
  - [2024-01-29] Our paper can be seen here 👉 [arXiv](https://arxiv.org/abs/2309.09737).
  - [2024-03-13] We further improve the overall performance. Please check [Evaluation](#-evaluation).
  - [2024-03-13] Our paper demo video can be seen here 👉[video](https://youtu.be/IxfyCWyNhfw).
+ - [2024-03-22] We are working on adding AB3DMOT metrics into the evaluation run. Stay tuned!
 ## 🔗 Citation
 If you find our work useful in your research, please consider citing:
 
@@ -155,7 +156,7 @@ Then run the following command:
 python main.py --config configs_eval.yaml
 ```
 
-This will generate the predictions in the `results` folder. 
+This will only generate the predictions in the `results` folder. We are currently working on adding AB3DMOT metrics into the evaluation run.
 
 The evaluation results of the provided trained RaTrack model are following:
 
