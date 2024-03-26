@@ -30,11 +30,11 @@
 | ***Figure 1. Overall network pipeline of RaTrack**. Given each 4D radar point cloud from the stream, we first apply a **backbone network** to encode intra- and inter-frame radar point cloud features. With the extracted features, our point-wise **motion estimation module** infers point-level scene flow as an explicit complement to augment the latent features of radar point clouds. Our advocated idea of class-agnostic detection without bounding boxes is introduced in the **object detection module** in which moving points are first identified and then used to detect moving objects via clustering. Finally, our **data association module** computes the affinity matrix with a learnable distance metric and then optimises the bipartite matching problem. The entire network is end-to-end trainable with a multi-task loss that incorporates three supervised subtasks: motion segmentation, scene flow estimation, and affinity matrix computation.* |
 
 ## 🔥 News
+ - [2024-03-22] We are working on integrating AB3DMOT evaluation scripts into the evaluation run. Stay tuned!
+ - [2024-03-13] Our paper demo video can be seen here 👉 [video](https://youtu.be/IxfyCWyNhfw).
+ - [2024-03-13] We further improved RaTrack's overall performance. Please check [Evaluation](#-evaluation).
+ - [2024-01-29] Our paper can be read here 👉 [arXiv](https://arxiv.org/abs/2309.09737).
  - [2024-01-29] Our paper is accepted by [ICRA 2024](https://2024.ieee-icra.org/) 🎉.
- - [2024-01-29] Our paper can be seen here 👉 [arXiv](https://arxiv.org/abs/2309.09737).
- - [2024-03-13] We further improve the overall performance. Please check [Evaluation](#-evaluation).
- - [2024-03-13] Our paper demo video can be seen here 👉[video](https://youtu.be/IxfyCWyNhfw).
- - [2024-03-22] We are working on adding AB3DMOT metrics into the evaluation run. Stay tuned!
 ## 🔗 Citation
 If you find our work useful in your research, please consider citing:
 
@@ -156,7 +156,7 @@ Then run the following command:
 python main.py --config configs_eval.yaml
 ```
 
-This will only generate the predictions in the `results` folder. We are currently working on adding AB3DMOT metrics into the evaluation run.
+This will only generate the predictions in the `results` folder. We are currently working on integrating our point-based version of AB3DMOT evaluation scripts into the evaluation run.
 
 The evaluation results of the provided trained RaTrack model are following:
 
