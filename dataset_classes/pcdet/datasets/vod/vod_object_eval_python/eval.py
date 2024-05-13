@@ -38,7 +38,7 @@ def clean_data(gt_anno, dt_anno, current_class, difficulty):
     num_dt = len(dt_anno["name"])
     num_valid_gt = 0
     for i in range(num_gt):
-        bbox = gt_anno["bbox"][i]zz
+        bbox = gt_anno["bbox"][i]
         gt_name = gt_anno["name"][i].lower()
         height = bbox[3] - bbox[1]
         valid_class = -1
