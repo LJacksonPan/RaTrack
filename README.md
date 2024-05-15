@@ -3,13 +3,13 @@
 </p> <p align="center">
 <img src='./doc/logo.jpg' width="30"> RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud</strong></h1>
   <p align="center">
-    <a href='https://www.rca.ac.uk/research-innovation/research-degrees/research-students/zhijun-pan/' target='_blank'>Zhijun Pan*</a>&emsp; 
-    <a href='https://toytiny.github.io/' target='_blank'>Fangqiang Ding*</a>&emsp;
-    <a href='https://www.linkedin.com/in/hantao-zhong/' target='_blank'>Hantao Zhong*</a>&emsp;
+    <a href='https://www.rca.ac.uk/research-innovation/research-degrees/research-students/zhijun-pan/' target='_blank'>Zhijun Pan†*</a>&emsp; 
+    <a href='https://toytiny.github.io/' target='_blank'>Fangqiang Ding†</a>&emsp;
+    <a href='https://www.linkedin.com/in/hantao-zhong/' target='_blank'>Hantao Zhong†</a>&emsp;
     <a href='https://christopherlu.github.io/' target='_blank'>Chris Xiaoxuan Lu
     </a>&emsp;
     <br>
-    *Equal Contribution
+    †Equal Contribution. *Project Lead.
     <br>
     Royal College of Art&emsp;University of Edinburgh&emsp;University of Cambridge&emsp;
     University College London
