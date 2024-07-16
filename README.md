@@ -171,7 +171,7 @@ If you are interested in evaluating the predictions with our version of AB3DMOT 
 
 **Q: Regarding Our Modified AB3DMOT Evaluation Code**
 
-A: Due to time constraints, we were not able to implement and integrate a differentiable clustering method into our pipeline. However, all local and global features are utilised and passed through during the clustering process. Adding a carefully selected and implemented differentiable clustering method could be a potential future work to further improve the pipeline's performance.
+A: Due to AB3DMOT's repository license, we are currently not able to distribute our modified version of the AB3DMOT evaluation. We are contacting AB3DMOT's authors to gain permission for distribution.
 
 **Q: Why DBSCAN?**
 
