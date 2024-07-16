@@ -9,7 +9,7 @@
     <a href='https://christopherlu.github.io/' target='_blank'>Chris Xiaoxuan Lu
     </a>&emsp;
     <br>
-    †Equal Contribution. *Project Lead.
+    †Equal Contribution&emsp;*Project Lead
     <br>
     Royal College of Art&emsp;University of Edinburgh&emsp;University of Cambridge&emsp;
     University College London
@@ -165,7 +165,17 @@ The evaluation results of the provided trained RaTrack model are following:
 | RaTrack   | 74.16  | 31.50 | 60.17 | 67.27| 77.83| 42.65| 14.71|
 | RaTrack (Improved)| 80.33| 34.58 | 59.37 | 62.80| 77.07| 54.41| 13.24|
 
-If you are interested in evaluating the predictions with our version of AB3DMOT evaluation, please contact us.
+If you are interested in evaluating the predictions with our version of AB3DMOT evaluation*, please contact us.
+
+## 💬 Q&A
+
+**Q: Regarding Our Modified AB3DMOT Evaluation Code**
+
+A: Due to time constraints, we were not able to implement and integrate a differentiable clustering method into our pipeline. However, all local and global features are utilised and passed through during the clustering process. Adding a carefully selected and implemented differentiable clustering method could be a potential future work to further improve the pipeline's performance.
+
+**Q: Why DBSCAN?**
+
+A: Due to our time limits, we were not able to implement and integrate a differentiable clustering method into our pipeline. However, all local and global features are utilised and passed through during the clustering process. Adding a mindfully selected and implemented differentiable clustering method could be a potential future work to further improve the pipeline's performance.
 
 ## 👏 Acknowledgements
 
