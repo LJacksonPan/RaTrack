@@ -40,11 +40,13 @@ If you find our work useful in your research, please consider citing:
 
 
 ```bibtex
-@InProceedings{pan2023moving,
-    author    = {Pan, Zhijun and Ding, Fangqiang and Zhong, Hantao and Lu, Chris Xiaoxuan},
-    title     = {RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud},
-    booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
-    year      = {2024},
+@inproceedings{pan2024ratrack,
+  title={RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud},
+  author={Pan, Zhijun and Ding, Fangqiang and Zhong, Hantao and Lu, Chris Xiaoxuan},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={4480--4487},
+  year={2024},
+  organization={IEEE}
 }
 ```
 
