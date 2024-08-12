@@ -18,7 +18,7 @@
 
 <div id="top" align="center">
 
-[![arXiv](https://img.shields.io/badge/arXiv-2309.09737-b31b1b.svg)](https://arxiv.org/abs/2309.09737)
+[![IEEE](https://img.shields.io/badge/any_text-you_like-blue)](https://doi.org/10.1109/ICRA57147.2024.10610368)
 [![](https://img.shields.io/youtube/views/IxfyCWyNhfw?label=Demo&style=flat)](https://www.youtube.com/watch?v=IxfyCWyNhfw&feature=youtu.be)
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/LJacksonPan/RaTrack/blob/master/LICENSE)
 
@@ -40,14 +40,16 @@ If you find our work useful in your research, please consider citing:
 
 
 ```bibtex
-@inproceedings{pan2024ratrack,
-  title={RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud},
+@INPROCEEDINGS{10610368,
   author={Pan, Zhijun and Ding, Fangqiang and Zhong, Hantao and Lu, Chris Xiaoxuan},
-  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
-  pages={4480--4487},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={RaTrack: Moving Object Detection and Tracking with 4D Radar Point Cloud}, 
   year={2024},
-  organization={IEEE}
-}
+  volume={},
+  number={},
+  pages={4480-4487},
+  keywords={Computer vision;Three-dimensional displays;Motion segmentation;Noise;Radar detection;Radar;Radar imaging},
+  doi={10.1109/ICRA57147.2024.10610368}}
 ```
 
 ## 📊 Qualitative results
