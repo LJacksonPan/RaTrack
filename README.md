@@ -18,7 +18,7 @@
 
 <div id="top" align="center">
 
-[![IEEE](https://img.shields.io/badge/any_text-you_like-blue)](https://doi.org/10.1109/ICRA57147.2024.10610368)
+[![IEEE](https://img.shields.io/badge/IEEE-10610368-blue)](https://doi.org/10.1109/ICRA57147.2024.10610368)
 [![](https://img.shields.io/youtube/views/IxfyCWyNhfw?label=Demo&style=flat)](https://www.youtube.com/watch?v=IxfyCWyNhfw&feature=youtu.be)
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/LJacksonPan/RaTrack/blob/master/LICENSE)
 
