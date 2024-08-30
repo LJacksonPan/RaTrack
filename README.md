@@ -30,6 +30,7 @@
 | ***Figure 1. Overall network pipeline of RaTrack**. Given each 4D radar point cloud from the stream, we first apply a **backbone network** to encode intra- and inter-frame radar point cloud features. With the extracted features, our point-wise **motion estimation module** infers point-level scene flow as an explicit complement to augment the latent features of radar point clouds. Our advocated idea of class-agnostic detection without bounding boxes is introduced in the **object detection module** in which moving points are first identified and then used to detect moving objects via clustering. Finally, our **data association module** computes the affinity matrix with a learnable distance metric and then optimises the bipartite matching problem. The entire network is end-to-end trainable with a multi-task loss that incorporates three supervised subtasks: motion segmentation, scene flow estimation, and affinity matrix computation.* |
 
 ## 🔥 News
+ - [2024-08-30] Some improvements are on the way, please see our note in the Github issue.
  - [2024-03-22] We are working on integrating AB3DMOT evaluation scripts into the evaluation run. Stay tuned!
  - [2024-03-13] Our paper demo video can be seen here 👉 [video](https://youtu.be/IxfyCWyNhfw).
  - [2024-03-13] We further improved RaTrack's overall performance. Please check [Evaluation](#-evaluation).
@@ -152,7 +153,6 @@ To evaluate with the trained RaTrack model, please open the `configs_eval.yaml` 
 ```yaml
 model_path: 'checkpoint/track4d_radar/models/model.last.t7'
 ```
-
 
 Then run the following command:
 
